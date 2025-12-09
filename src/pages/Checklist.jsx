@@ -1,5 +1,7 @@
 
 import { Box, Typography, List, ListItem, ListItemText, Divider } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import ChecklistTabs from "./ChecklistTabs";
 
 export default function Checklist() {
     const checklistItems = [
@@ -7,7 +9,15 @@ export default function Checklist() {
     "Major orderblocks + breakerblocks",
     ];
   return (
-    <Box sx={{ p: 3 }}>
+    // Sub navigation
+    <Box sx={{ mx: 10, px: 6, backgroundColor: '#e0e0e0', border: '1px solid black' }}>
+      <Box sx={{ p: 3 }}>
+        <ChecklistTabs />
+        <Box sx={{ mt: 4 }}>
+          <Outlet />
+        </Box>
+      </Box>
+
       <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold", textTransform: "uppercase"}}>
         Morning Checklist
       </Typography>
