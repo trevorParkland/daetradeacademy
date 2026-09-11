@@ -34,6 +34,20 @@ export default function Navigation() {
           >
             Checklist
           </Button>
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to={appConfig.routes.priceaction}
+          >
+            Price Action
+          </Button>
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to={appConfig.routes.bonds}
+          >
+            Analysis
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

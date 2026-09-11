@@ -1,7 +1,7 @@
 import { Box, Typography, List, ListItem, ListItemText, Divider } from "@mui/material";
 
 export default function Orderflow() {
-  const checklistItems = [
+  const orderflowList = [
     <>
       <strong>Aggressive buying</strong> but no follow through = trapped buyers – good indication
       market will go down to test the buyers
@@ -19,7 +19,7 @@ export default function Orderflow() {
       </Typography>
      
       <List sx={{ pl: 6, listStyleType: "circle" }}>
-          {checklistItems.map((text, index) => (
+          {orderflowList.map((text, index) => (
             <ListItem key={index} sx={{ display: "list-item" }}>
               <ListItemText primary={text} />
             </ListItem>
